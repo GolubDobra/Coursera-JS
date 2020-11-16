@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(233, 231, 105, 0.986);
+}
+
+.list-1,
+.list-2 {
+  margin: 0 50px 0 1000px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  font-style: oblique;
+  letter-spacing: 5px;
+  font-size: 50px;
+  font-weight: 900px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+h1::first-letter {
+  color: red;
+}
+
+img {
+  width: 400px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+img:hover {
+  opacity: 0.7;
+}
+
+div {
+  width: 400px;
+  height: 300px;
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 40px;
+  background-color: rgb(148, 210, 238);
+  opacity: 1;
+  border-radius: 20px;
+  box-sizing: content-box;
+}
+
+.name {
+  font-size: 20px;
+  font-style: italic;
+  padding-top: 20px;
+  margin-left: 20px;
+}
+
+.name:hover {
+  color: red;
+}
+
+.status {
+  font-size: 20px;
+  font-style: italic;
+  padding-top: 5px;
+  margin-left: 20px;
+  color: rgb(224, 85, 30);
+}
+
+span {
+  color: rgb(124, 39, 163);
+}
+
+.description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 20px;
+  font-style: italic;
+  padding-top: 5px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.description:hover {
+  white-space: normal;
+}
+
+legend {
+  margin-top: 5px;
+  margin-left: 20px;
+  font-size: 20px;
+  color: rgb(36, 212, 59);
+}
+
+.price {
+  margin-top: 5px;
+  margin-left: 20px;
+  font-size: 20px;
+  color: rgb(22, 81, 207);
+}
+
+.rating-area {
+  overflow: hidden;
+  width: 100px;
+  margin-left: 10px;
+}
+.rating-area:not(:checked) > input {
+  display: none;
+}
+.rating-area:not(:checked) > label {
+  float: right;
+  width: 20px;
+  padding: 0;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 20px;
+  color: lightgrey;
+  text-shadow: 1px 1px #bbb;
+}
+.rating-area:not(:checked) > label:before {
+  content: "★";
+}
+.rating-area > input:checked ~ label {
+  color: gold;
+  text-shadow: 1px 1px #c60;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+  color: gold;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+  color: gold;
+  text-shadow: 1px 1px goldenrod;
+}
+.rate-area > label:active {
+  position: relative;
+}

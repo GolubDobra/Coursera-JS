@@ -1,0 +1,328 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+header {
+    padding: 10px;
+    text-align: center;
+    font: 30px Arial, Helvetica, sans-serif;
+    letter-spacing: 7px;
+}
+
+
+/*изменение первой буквы в красный цвет*/
+
+header:first-letter {
+    color: #b40606;
+}
+
+
+/*футер прибит к нижней границе*/
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(167, 167, 167);
+}
+
+
+/*информация о компании: стиль шрифта и флексовая расстановка*/
+
+.info {
+    display: flex;
+    border-top: 1px solid rgb(100, 100, 100);
+    font: 10px Arial, Helvetica, sans-serif;
+    margin: 0 20px;
+}
+
+
+/*адрес смещен в правый край*/
+
+.address {
+    margin-left: auto;
+}
+
+
+/*боковые меню расставлены с помощью флекс*/
+
+.menu {
+    display: flex;
+}
+
+
+/*стиль боковых меню*/
+
+nav,
+.right_menu {
+    margin: 20px;
+    width: 200px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.103);
+}
+
+
+/*длина левого меню*/
+
+nav {
+    height: 1680px;
+}
+
+
+/*стиль блоков названия пород слева*/
+
+.radio {
+    display: block;
+    text-align: center;
+    font: 20px Arial, Helvetica, sans-serif;
+    border-bottom: 1px solid rgb(100, 100, 100);
+    line-height: 65px;
+}
+
+
+/*длина правого меню*/
+
+.right_menu {
+    height: 430px;
+}
+
+
+/*надпись рейтинг: стиль*/
+
+.rating {
+    padding-left: 10px;
+    text-transform: uppercase;
+    color: #b40606;
+    font: 20px Arial, Helvetica, sans-serif;
+}
+
+
+/*расстояние между картинками рейтинга и чекбоксом*/
+
+input[id="check_rating"] {
+    margin-bottom: 20px;
+}
+
+
+/*разметка флекс для картинок*/
+
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin: 20px;
+    height: 1700px;
+    width: 66%;
+}
+
+
+/*позиционирование относительно дивов для надписи Имени и Возраста*/
+
+.catalog div {
+    position: relative;
+}
+
+
+/*высота дива для каждой картинки*/
+
+.catalog div:nth-of-type(1),
+.catalog div:nth-of-type(2),
+.catalog div:nth-of-type(6),
+.catalog div:nth-of-type(7) {
+    height: 425px;
+}
+
+.catalog div:nth-of-type(3),
+.catalog div:nth-of-type(4),
+.catalog div:nth-of-type(5) {
+    height: 210px;
+}
+
+.catalog div:nth-of-type(8) {
+    height: 618px;
+}
+
+
+/*абсолютное позиционирование для надписи Имени и Возраста*/
+
+.catalog p {
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
+    padding: 20px 20px 20px 30px;
+    visibility: hidden;
+    color: #ffffff;
+    font: 20px Arial, Helvetica, sans-serif;
+}
+
+
+/*при наведении на картинку появляется описание кота*/
+
+.post_cat:hover .descr_cat {
+    visibility: visible;
+    background-color: #b406069f;
+}
+
+
+/*отступы для картинок*/
+
+img {
+    margin: 10px;
+    object-fit: cover;
+}
+
+
+/*ширина и высота картинок*/
+
+img[src="img/toyger1.jpeg"],
+img[src="img/angor3.jpeg"] {
+    width: 285px;
+    height: 405px;
+}
+
+img[src="img/angor1.jpeg"],
+img[src="img/sfinks2.jpeg"] {
+    width: 592px;
+    height: 405px;
+}
+
+img[src="img/angor2.jpeg"],
+img[src="img/toyger2.jpeg"],
+img[src="img/sfinks1.jpeg"] {
+    width: 285px;
+    height: 190px;
+}
+
+img[src="img/toyger3.jpeg"] {
+    width: 899px;
+}
+
+input[name="cats"] {
+    display: none;
+}
+
+
+/*стиль каталога*/
+
+.radio {
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.459);
+    font: 20px Arial, Helvetica, sans-serif;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/*анимация кнопок при нажатии*/
+
+input[id="all"]:checked~nav label[for="all"],
+input[id="angor"]:checked~nav label[for="angor"],
+input[id="sfinks"]:checked~nav label[for="sfinks"],
+input[id="toyger"]:checked~nav label[for="toyger"] {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+/*при нажатии должно именять картинки на прозрачные!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+input[id="angor"]:checked~.catalog .post_cat>img:not([class="angor"]) {
+    opacity: 0.5;
+}
+
+input[id="sfinks"]:checked~.catalog .post_cat>img:not([class="sfinks"]) {
+    opacity: 0.5;
+}
+
+input[id="toyger"]:checked~.catalog .post_cat>img:not([class="toyger"]) {
+    opacity: 0.5;
+}
+
+
+/*флекс для рейтинга*/
+
+.rating_sections {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*стиль рейтинга, блоки рейтинга*/
+
+.rating_sections div {
+    font: 15px bold Arial, Helvetica, sans-serif;
+    margin: 5px 0 7px 5px;
+}
+
+
+/*ширина, высота и цвет трех рейтинговых линей*/
+
+#angor_rating .rating_line {
+    height: 15px;
+    width: 130px;
+    background: linear-gradient(to right, green, white);
+}
+
+#sfinks_rating .rating_line {
+    height: 15px;
+    width: 65px;
+    background: linear-gradient(to right, yellow, white);
+}
+
+#toyger_rating .rating_line {
+    height: 15px;
+    width: 50px;
+    background: linear-gradient(to right, red, white);
+}
+
+
+/*цифра рейтинга после линий рейтинга*/
+
+#angor_rating .rating_line:nth-of-type(1)::after {
+    content: '10';
+    margin-left: 150px;
+    font: 15px bold Arial, Helvetica, sans-serif;
+}
+
+#sfinks_rating .rating_line:nth-of-type(1)::after {
+    content: '5';
+    margin-left: 155px;
+    font: 15px bold Arial, Helvetica, sans-serif;
+}
+
+#toyger_rating .rating_line:nth-of-type(1)::after {
+    content: '3';
+    margin-left: 155px;
+    font: 15px bold Arial, Helvetica, sans-serif;
+}
+
+
+/*после нажатия инпута "по убыванию", рейтинг меняется местами по убыванию*/
+
+input[id="check_rating"]:checked~.rating_sections #angor_rating {
+    order: 1;
+}
+
+input[id="check_rating"]:checked~.rating_sections #sfinks_rating {
+    order: 2;
+}
+
+input[id="check_rating"]:checked~.rating_sections #toyger_rating {
+    order: 3;
+}
+
+
+/*марджины для инпута*/
+
+.right_menu label {
+    margin-left: 40%;
+}
+
+
+/*марджины для названия породы*/
+
+.name_rating {
+    margin-left: 5px;
+}

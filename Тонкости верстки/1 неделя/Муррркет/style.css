@@ -1,0 +1,207 @@
+/*@keyframes block_line {
+    100% {
+        background-color: green;
+        margin: 1000px;
+    }
+}*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+}
+
+header b {
+    color: red;
+}
+
+section {
+    margin: 20px;
+    width: 200px;
+    height: 550px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px;
+    line-height: 15px;
+    display: inline-block;
+}
+
+p {
+    padding: 0px;
+    font: 10px 'Times New Roman', Times, serif;
+}
+
+article {
+    font: 14px 'Times New Roman', Times, serif;
+    width: 200px;
+}
+
+.name_cat {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0px;
+}
+
+.cat {
+    width: 200px;
+}
+
+h6 small {
+    text-decoration: line-through;
+}
+
+h6 b {
+    font: 18px 'Times New Roman', Times, serif;
+    color: red;
+}
+
+.cat:hover {
+    opacity: 0.7;
+}
+
+p a:hover {
+    cursor: pointer;
+    color: red
+}
+
+div img {
+    width: 20px;
+}
+
+input[name=view] {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.blocks,
+.lines {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 2px;
+    border: none;
+}
+
+.blocks div {
+    height: 50px;
+    width: 50px;
+    margin: 2px;
+    float: left;
+    background-image: url("icon/blocks.png");
+}
+
+.lines div {
+    height: 50px;
+    width: 50px;
+    background-image: url("icon/lines.png");
+    margin: 2px auto;
+}
+
+.lines div:nth-child(2) {
+    margin: 3px auto;
+}
+
+#blocks:checked~main>section {
+    display: inline-block;
+}
+
+#lines:checked~main>section {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    min-width: 480px;
+    bottom: 0;
+}
+
+.stars {
+    position: relative;
+    width: 5em;
+    height: 1em;
+    background-image: url(icon/off_star1.png);
+    background-size: 1em auto;
+    background-repeat: repeat-x;
+    /*повторение звездочек вправо*/
+}
+
+.stars input {
+    position: absolute;
+    margin: 0;
+    height: 1em;
+    font-size: inherit;
+    /*используем это вот для отображения элемента*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-size: 1em auto;
+    background-repeat: repeat-x;
+}
+
+.stars input:focus {
+    outline: none;
+}
+
+.stars input:hover,
+.stars input:checked {
+    background-image: url(icon/on_star2.png);
+}
+
+.stars input:hover~.rating1 {
+    background-image: url(icon/off_star1.svg);
+}
+
+.stars input:nth-of-type(1) {
+    z-index: 10;
+    width: 0.5em;
+}
+
+.stars input:nth-of-type(2) {
+    z-index: 9;
+    width: 1em;
+}
+
+.stars input:nth-of-type(3) {
+    z-index: 8;
+    width: 1.5em;
+}
+
+.stars input:nth-of-type(4) {
+    z-index: 7;
+    width: 2em;
+}
+
+.stars input:nth-of-type(5) {
+    z-index: 6;
+    width: 2.5em;
+}
+
+.stars input:nth-of-type(6) {
+    z-index: 5;
+    width: 3em;
+}
+
+.stars input:nth-of-type(7) {
+    z-index: 4;
+    width: 3.5em;
+}
+
+.stars input:nth-of-type(8) {
+    z-index: 3;
+    width: 4em;
+}
+
+.stars input:nth-of-type(9) {
+    z-index: 2;
+    width: 4.5em;
+}
+
+.stars input:nth-of-type(10) {
+    z-index: 1;
+    width: 5em;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Бабуленькин урожай</title>
+</head>
+
+<body>
+    <header>
+        <h1>Бабуленькин урожай</h1>
+        <hr>
+    </header>
+    <section class="image">
+        <div><img src="img/beet.jpeg" class="img_beet">
+            <p class="definition">Свёкла обыкнове́нная — однолетнее, двулетнее или многолетнее травянистое растение; вид рода Свёкла семейства Амарантовые. Культивируется на больших площадях повсеместно. В юго-западных областях России, в Белоруссии и на Украине растение называют
+                бура́к, или буря́к.</p>
+        </div>
+        <div><img src="img/radish.jpeg" class="img_radish">
+            <p class="definition">Редька посевная, или Редька огородная — однолетнее или двулетнее травянистое растение, вид рода Редька семейства Капустные.</p>
+        </div>
+        <div><img src="img/asparagus.jpeg" class="img_asparagus">
+            <p class="definition">Спа́ржа — род растений семейства спаржевые, рассеянных по всему свету, преимущественно в сухом климате. Наиболее распространённый вид — спаржа лекарственная. Одни виды спаржи — травы, другие — полукустарники, развивающие подземное корневище
+                и надземные более или менее ветвистые стебли, у многих видов ползучие.</p>
+        </div>
+        <div><img src="img/artichoke.jpeg" class="img_artichoke">
+            <p class="definition"> Артишок - многолетняя садово-огородная овощная культура из рода Артишоков семейства Астровых. Нераскрывшиеся бутоны растения («корзинки», «головки», «шишки») съедобны и наряду с реве́нем и спа́ржей относятся к деликатесным овощам[2]. Отдалённо
+                напоминают вкус молодого грецкого ореха.</p>
+        </div>
+
+
+    </section>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+body { margin: 0; padding: 0; } section { position: absolute; top: 30%; margin: auto; margin-left: 130px; } img { width: 200px; } section>div:hover { transform: scale(1.3); background-color: white; box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px
+rgba(0, 0, 0, 0.22); } section>div:hover p { color: black; } section>div { padding: 5px; margin: 5px; } p { width: 200px; font: 10px 'Times New Roman', Times, serif; color: white; } div { display: table-cell; vertical-align: top; display: inline-block;
+cursor: pointer; } section>div:active { transform: scale(2); } body { margin: 0; padding: 0; } section { position: absolute; top: 30%; margin: auto; margin-left: 130px; } section>div:hover { transform: scale(1.3); background-color: white; box-shadow:
+0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); } section>div:hover p { display: inline-block; width: 200px; } section>div { padding: 5px; margin: 5px; } p { font: 10px 'Times New Roman', Times, serif; display: none; } div { display:
+inline-block; vertical-align: top; cursor: pointer; } input[type="checkbox"] { display: none; } input+label { display: block; width: 200px; height: 120px; border: none; padding: 0; margin: 0; outline: none; background-size: contain; background-repeat:
+no-repeat; background-position: 50% 50%; /* transition: .4s; */ } input:checked+label { width: 100vw; height: 100vh; position: fixed; left: 0; top: 0; /* transform: translate(calc(2em + 160px - 100vw), calc(0px - 120px - 2em)); */ background-color: rgba(36,
+32, 32, 0.658); background-size: auto; z-index: 99999; } input:checked+p { color: white; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Бабуленькин урожай</title>
+</head>
+
+<body>
+    <header>
+        <h1>Бабуленькин урожай</h1>
+        <hr>
+    </header>
+    <section class="image">
+        <div><input id="image1" type="checkbox"><label for="image1" style="background-image: url('img/beet.jpeg');"></label>
+            <p class="definition">Свёкла обыкнове́нная — однолетнее, двулетнее или многолетнее травянистое растение; вид рода Свёкла семейства Амарантовые. Культивируется на больших площадях повсеместно. В юго-западных областях России, в Белоруссии и на Украине растение называют
+                бура́к, или буря́к.</p>
+        </div>
+        <div><input id="image2" type="checkbox"><label for="image2" style="background-image: url('img/radish.jpeg');"></label>
+            <p class="definition">Редька посевная, или Редька огородная — однолетнее или двулетнее травянистое растение, вид рода Редька семейства Капустные.</p>
+        </div>
+
+        <div><input id="image3" type="checkbox"><label for="image3" style="background-image: url('img/asparagus.jpeg');"></label>
+            <p class="definition">Спа́ржа — род растений семейства спаржевые, рассеянных по всему свету, преимущественно в сухом климате. Наиболее распространённый вид — спаржа лекарственная. Одни виды спаржи — травы, другие — полукустарники, развивающие подземное корневище
+                и надземные более или менее ветвистые стебли, у многих видов ползучие.</p>
+        </div>
+
+        <div><input id="image4" type="checkbox"><label for="image4" style="background-image: url('img/artichoke.jpeg');"></label>
+            <p class="definition"> Артишок - многолетняя садово-огородная овощная культура из рода Артишоков семейства Астровых. Нераскрывшиеся бутоны растения («корзинки», «головки», «шишки») съедобны и наряду с реве́нем и спа́ржей относятся к деликатесным овощам[2]. Отдалённо
+                напоминают вкус молодого грецкого ореха.</p>
+        </div>
+
+
+    </section>
+</body>
+
+</html>

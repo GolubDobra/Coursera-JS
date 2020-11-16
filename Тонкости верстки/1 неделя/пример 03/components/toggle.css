@@ -1,0 +1,65 @@
+/* Based on the following code: https://www.w3schools.com/howto/howto_css_switch.asp */
+
+
+/* Hide the toggle checkbox */
+.toggle__input {
+  display: none;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  --switch-height: 1em;
+  --switch-width: calc(
+    var(--switch-height) * 1.75);
+
+
+    position: relative;
+    display: inline-block;
+    width: var(--switch-width);
+    height: var(--switch-height);
+  }
+  
+  /* Hide default HTML checkbox */
+  #view-toggle__input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: var(--switch-height);
+    width: var(--switch-height);
+    background-color: white;
+    transition: .1s;
+  }
+  
+  #view-toggle__input:checked ~ * .slider:before {
+    transform: translateX(
+      calc(var(--switch-height) * 0.75)
+    );
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: var(--switch-height);
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }

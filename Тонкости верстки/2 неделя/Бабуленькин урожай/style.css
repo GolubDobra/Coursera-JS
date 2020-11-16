@@ -1,0 +1,221 @@
+body {
+    min-height: 100vh;
+    height: 1px;
+    width: 1300px;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+label {
+    width: 250px;
+    text-align: center;
+}
+
+main {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 1420px;
+    left: calc(50% - 650px);
+}
+
+section {
+    position: absolute;
+    top: calc(50% - 120px);
+    height: 170px;
+    width: 3000px;
+    margin-left: 30px;
+}
+
+.text_veg {
+    font: 10px 'Times New Roman', Times, serif;
+    width: 270px;
+    display: none;
+}
+
+.card_veg img {
+    width: 270px;
+}
+
+.card_veg {
+    width: 280px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px;
+    margin: 10px;
+    position: relative;
+}
+
+.card_veg:hover {
+    transform: scale(1.3);
+    background-color: white;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card_veg:hover .text_veg {
+    display: inline-block;
+    padding: 5px;
+    width: 270px;
+}
+
+input[name='scroll'] {
+    display: inline-block;
+    position: relative;
+    top: calc(50% + 200px);
+    left: calc(50% - 35px);
+}
+
+input#scroll_2:checked~.image {
+    left: -98%/*-1370px;*/
+}
+
+input[name='show_card'] {
+    opacity: 0;
+}
+
+.exit {
+    display: none;
+}
+
+input[name='show_card']:checked~.exit {
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: block;
+    height: 150vh;
+    width: 150vw;
+    background: rgb(30, 30, 30);
+    opacity: 0.7;
+}
+
+input[name='show_card']:checked~label[for='view_exit'] {
+    position: fixed;
+    display: block;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+label[for='view_exit']:hover {
+    transform: scale(1.3);
+}
+
+label[for='view_exit'] {
+    transition: transform 1s ease-out;
+}
+
+input[name='show_card']:checked~label[for='view_exit']::after,
+input[name='show_card']:checked~label[for='view_exit']::before {
+    position: absolute;
+    display: block;
+    content: '';
+    left: 10px;
+    width: .5px;
+    height: 25px;
+    border: 2px solid white;
+    background: white;
+    transform: rotate(0.125turn);
+}
+
+input[name='show_card']:checked~label[for='view_exit']::before {
+    transform: rotate(-0.125turn);
+}
+
+input#view_exit {
+    display: none;
+}
+
+input#view_exit:checked~label[for='view_exit'],
+label[for='view_exit'] {
+    display: none;
+}
+
+input[name='show_card']:checked+article.card_veg img {
+    position: fixed;
+    left: calc(50vw - 70px);
+    transform: scale(2);
+    z-index: 2;
+}
+
+input[name='show_card']:checked+article .card_text {
+    opacity: 0;
+}
+
+input#view_exit:checked+.exit {
+    display: none;
+}
+
+
+/*section>div:hover {
+    transform: scale(1.3);
+    background-color: white;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+section>div:hover p {
+    display: inline-block;
+    width: 200px;
+}
+
+section>div {
+    padding: 5px;
+    margin: 5px;
+}
+
+p {
+    font: 10px 'Times New Roman', Times, serif;
+    display: none;
+}
+
+div {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input+label {
+    display: block;
+    width: 200px;
+    height: 120px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+      transition: .4s;
+  
+}
+
+input:checked+label {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+      transform: translate(calc(2em + 160px - 100vw), calc(0px - 120px - 2em));
+  
+    background-color: rgba(36, 32, 32, 0.658);
+    background-size: auto;
+    z-index: 99999;
+}
+
+input:checked+p {
+    color: white;
+}*/

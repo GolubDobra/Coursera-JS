@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Бабуленькины котятки</title>
+</head>
+
+<body>
+    <header>Бабуленькины котятки</header>
+    <main class="menu">
+
+        <input type="radio" id="all" name="cats" checked>
+        <input type="radio" id="angor" name="cats">
+        <input type="radio" id="sfinks" name="cats">
+        <input type="radio" id="toyger" name="cats">
+
+        <nav>
+            <label for="all" class="radio">Все коты</label>
+            <label for="angor" class="radio">Ангорская</label>
+            <label for="sfinks" class="radio">Сфинкс</label>
+            <label for="toyger" class="radio">Тойгер</label>
+        </nav>
+
+        <article class="catalog">
+            <div class="post_cat"><img src="img/toyger1.jpeg" alt="Вова" class="toyger">
+                <p class="descr_cat">Вова, 1 год</p>
+            </div>
+
+            <div class="post_cat"><img src="img/angor1.jpeg" alt="Вася" class="angor">
+                <p class="descr_cat">Вася, 1 год</p>
+            </div>
+            <div class="post_cat"><img src="img/angor2.jpeg" alt="Грейс" class="angor">
+                <p class="descr_cat">Грейс, 3 года</p>
+            </div>
+            <div class="post_cat"><img src="img/toyger2.jpeg" alt="Тоша" class="toyger">
+                <p class="descr_cat">Тоша, 4 года</p>
+            </div>
+
+            <div class="post_cat"><img src="img/sfinks1.jpeg" alt="Гена" class="sfinks">
+                <p class="descr_cat">Гена, 2 года</p>
+            </div>
+            <div class="post_cat"><img src="img/sfinks2.jpeg" alt="Клава" class="sfinks">
+                <p class="descr_cat">Клава, 1 год</p>
+            </div>
+
+            <div class="post_cat"><img src="img/angor3.jpeg" alt="Соня" class="angor">
+                <p class="descr_cat">Соня, 2 года</p>
+            </div>
+
+            <div class="post_cat"><img src="img/toyger3.jpeg" alt="Мура" class="toyger">
+                <p class="descr_cat">Мура, 2 года</p>
+            </div>
+
+        </article>
+
+        <div class="right_menu">
+            <p class="rating">Рейтинг</p>
+            <label for="check_rating">по убыванию </label>
+            <input type="checkbox" id="check_rating">
+
+            <section class="rating_sections">
+                <div id="toyger_rating">
+                    <span class="name_rating">Тойгер</span>
+                    <div class="rating_line"></div>
+
+                </div>
+                <div id="angor_rating">
+                    <span class="name_rating">Ангорская</span>
+                    <div class="rating_line"></div>
+
+                </div>
+                <div id="sfinks_rating">
+                    <span class="name_rating">Сфинкс</span>
+                    <div class="rating_line"></div>
+
+                </div>
+
+
+
+
+            </section>
+        </div>
+
+
+    </main>
+    <footer>
+
+
+        <div class="info">
+            <p class="company">© Бабуленькины котятки, 2020</p>
+            <p class="address">Наш адрес: ул.Котовая, д.5</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
